@@ -13,11 +13,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "webpack --env production",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://concert-manager-api.herokuapp.com",
+  "proxy": "https://concert-manager-api.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
