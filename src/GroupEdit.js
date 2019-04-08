@@ -22,7 +22,9 @@ class GroupEdit extends Component {
   async componentDidMount() {
     if (this.props.match.params.id !== "new") {
       const group = await (await fetch(
-        `/api/group/${this.props.match.params.id}`
+        `https://concert-manager-api.herokuapp.com/api/group/${
+          this.props.match.params.id
+        }`
       )).json();
       this.setState({ item: group });
     }
@@ -41,7 +43,7 @@ class GroupEdit extends Component {
     event.preventDefault();
     const { item } = this.state;
 
-    await fetch("/api/group", {
+    await fetch("https://concert-manager-api.herokuapp.com/api/group", {
       method: item.id ? "PUT" : "POST",
       headers: {
         Accept: "application/json",
